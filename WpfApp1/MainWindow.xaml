@@ -7,24 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
-            <TextBlock Text="Program Do Obliczenia Włosów Na Głowie" Background="Gray" Foreground="Black" FontWeight="Bold" Width="600px" TextAlignment="Center" Height="20px" ></TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="667*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="100,0,0,0">
+            <TextBlock Text="Program Do Obliczenia Włosów Na Głowie" Background="Gray" Foreground="Black" FontWeight="Bold" Width="699" TextAlignment="Center" Height="20px" ></TextBlock>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Proszę Podać Gęstość Włosów(Cm2)" Background="Gray" Foreground="Black" FontWeight="Bold"></TextBlock>
-                <TextBox x:Name="gestosc" Width="150"></TextBox>
+                <TextBlock Text="Proszę Podać Gęstość Włosów(Cm2)" Background="Gray" Foreground="Black" FontWeight="Bold" Width="336" Height="16"></TextBlock>
+                <TextBox x:Name="Gestosc" Width="208"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Proszę Podać Obwód Głowy (Cm)" Background="Gray" Foreground="Black" FontWeight="Bold"></TextBlock>
-                <TextBox x:Name="obwod" Width="150px"></TextBox>
+                <TextBlock Text="Proszę Podać Obwód Głowy (Cm)" Background="Gray" Foreground="Black" FontWeight="Bold" Width="250"></TextBlock>
+                <TextBox x:Name="Obwod" Width="196"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Wysokość czoła (Cm)" Background="Gray" Foreground="Black" FontWeight="Bold"> </TextBlock>
-                <TextBox x:Name="wysokosc" Width="150px"></TextBox>
+                <TextBlock Text="Wysokość czoła (Cm)" Background="Gray" Foreground="Black" FontWeight="Bold" Width="202"></TextBlock>
+                <TextBox x:Name="Wysokosc" Width="197"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="wyslij" Content="Wyślij" Margin="140,0,0,0" Width="100px"></Button>
-                <Button x:Name="reset" Content="Reset" Margin="90,0,0,0" Width="100px"></Button>
+                <Button x:Name="Wyslij" Content="Wyślij" Margin="140,0,0,0" Width="100px" Click="Wyslij_Click"></Button>
+                <Button x:Name="Reset" Content="Reset" Margin="90,0,0,0" Width="100px"></Button>
             </StackPanel>
+            <TextBlock x:Name="Wynik" Width="200" Height="20" Foreground="Black"  HorizontalAlignment="Center"></TextBlock>
         </StackPanel>
     </Grid>
 </Window>

@@ -16,11 +16,15 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private double Srednia_gestosc = 200;
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+        public class Glowa 
+        {
+            
         }
     }
-
-    
 }
