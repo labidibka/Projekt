@@ -7,8 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <TextBlock></TextBlock>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Program Do Obliczenia Włosów Na Głowie" Background="Gray" Foreground="Black" FontWeight="Bold" Width="600px" TextAlignment="Center" Height="20px" ></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Proszę Podać Gęstość Włosów(Cm2)" Background="Gray" Foreground="Black" FontWeight="Bold"></TextBlock>
+                <TextBox x:Name="gestosc" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Proszę Podać Obwód Głowy (Cm)" Background="Gray" Foreground="Black" FontWeight="Bold"></TextBlock>
+                <TextBox x:Name="obwod" Width="150px"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Wysokość czoła (Cm)" Background="Gray" Foreground="Black" FontWeight="Bold"> </TextBlock>
+                <TextBox x:Name="wysokosc" Width="150px"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="wyslij" Content="Wyślij" Margin="140,0,0,0" Width="100px"></Button>
+                <Button x:Name="reset" Content="Reset" Margin="90,0,0,0" Width="100px"></Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
