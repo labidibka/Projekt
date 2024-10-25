@@ -47,7 +47,21 @@ namespace WpfApp1
         }
         private void Wyslij_click(object sender, RoutedEventArgs e) 
         {
-            try
+            try 
+            {
+                double gestoscWlosow = Convert.ToDouble(Gestosc.Text);
+                double obwodGlowy = Convert.ToDouble(Obwod.Text);
+                double wysokoscCzola = Convert.ToDouble(Wysokosc.Text);
+
+                Glowa glowa = new Glowa(gestoscWlosow, obwodGlowy, wysokoscCzola);
+
+                double liczbaWlosow = glowa.ObliczLiczbeWlosow();
+                Wynik.Text = $"Szacunkowa liczba włosów: {liczbaWlosow:N0}";
+            }
+            catch(Exception ex)
+            {
+                Wynik.Text = "Błąd danych: upewnij się, że podałeś liczby.";
+            }
         }
     }
 }
