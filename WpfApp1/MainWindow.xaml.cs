@@ -22,11 +22,17 @@ namespace WpfApp1
             InitializeComponent();
 
         }
-        public class Glowa 
+        public class Glowa
         {
-            private double gestosc;
-            private double obwod;
-            private double wysokosc
+            private double gestoscWlosow;
+            private double obwodGlowy;
+            private double wysokoscCzola;
+            public Glowa(double gestosc, double obwod, double wysokosc)
+                {
+                 this.gestoscWlosow = gestosc;
+                 this.obwodGlowy = obwod;
+                 this.wysokoscCzola = wysokosc;
+               }
         }
     }
 }
