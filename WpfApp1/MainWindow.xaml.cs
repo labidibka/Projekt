@@ -27,12 +27,18 @@ namespace WpfApp1
             private double gestoscWlosow;
             private double obwodGlowy;
             private double wysokoscCzola;
+            private const double PowierzchniaGlowyDomyslna = 600.0;
             public Glowa(double gestosc, double obwod, double wysokosc)
                 {
                  this.gestoscWlosow = gestosc;
                  this.obwodGlowy = obwod;
                  this.wysokoscCzola = wysokosc;
                }
+            private double ObliczPowierzchnieGlowy() 
+            {
+                return (obwodGlowy * wysokoscCzola) / 2.0 + PowierzchniaGlowyDomyslna;
+            }
+            
         }
     }
 }
