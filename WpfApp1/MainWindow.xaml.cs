@@ -38,7 +38,16 @@ namespace WpfApp1
             {
                 return (obwodGlowy * wysokoscCzola) / 2.0 + PowierzchniaGlowyDomyslna;
             }
+            public double ObliczLiczbeWlosow() 
+            {
+                double powierzchniaGlowy = ObliczPowierzchnieGlowy();
+                return gestoscWlosow * powierzchniaGlowy;
+            }
             
+        }
+        private void Wyslij_click(object sender, RoutedEventArgs e) 
+        {
+            try
         }
     }
 }
