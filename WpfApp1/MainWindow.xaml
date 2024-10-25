@@ -26,8 +26,8 @@
                 <TextBox x:Name="Wysokosc" Width="197"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="Wyslij" Content="Wyślij" Margin="140,0,0,0" Width="100px" Click="Wyslij_Click"></Button>
-                <Button x:Name="Reset" Content="Reset" Margin="90,0,0,0" Width="100px"></Button>
+                <Button x:Name="Wyslij" Content="Wyślij" Margin="140,0,0,0" Width="100px" Click="Wyslij_click"></Button>
+                <Button x:Name="Reset" Content="Reset" Margin="90,0,0,0" Width="100px" Click="Reset_click"></Button>
             </StackPanel>
             <TextBlock x:Name="Wynik" Width="200" Height="20" Foreground="Black"  HorizontalAlignment="Center"></TextBlock>
         </StackPanel>
