@@ -26,6 +26,8 @@ namespace WpfApp1
             private double gestoscWlosow;
             private double obwodGlowy;
             private double wysokoscCzola;
+            private const  double SredniaIloscWlosow = 125000.0;
+
             private const double PowierzchniaGlowyDomyslna = 600.0;
             public Glowa(double gestosc, double obwod, double wysokosc)
                 {
@@ -41,6 +43,12 @@ namespace WpfApp1
             {
                 double powierzchniaGlowy = ObliczPowierzchnieGlowy();
                 return gestoscWlosow * powierzchniaGlowy;
+               
+            }
+            public double SredniaWlosow() 
+            {
+                double SredniaLiczba = SredniaIloscWlosow;
+                return SredniaLiczba * 1;
             }
             
         }
@@ -53,9 +61,11 @@ namespace WpfApp1
                 double wysokoscCzola = Convert.ToDouble(Wysokosc.Text);
 
                 Glowa glowa = new Glowa(gestoscWlosow, obwodGlowy, wysokoscCzola);
-
+                
+                double SredniaLiczbaWlosow = glowa.SredniaWlosow();
                 double liczbaWlosow = glowa.ObliczLiczbeWlosow();
-                Wynik.Text = $"Szacunkowa liczba włosów: {liczbaWlosow:N0}";
+                double SredniaIloscProcent = (liczbaWlosow * 100) / SredniaLiczbaWlosow; 
+                Wynik.Text = $"Szacunkowa liczba włosów: {liczbaWlosow:N0}, Oraz jest ona Równa {SredniaIloscProcent}% W porownaniu do średniej liczbie włosów";
             }
             catch(Exception ex)
             {
