@@ -24,7 +24,9 @@ namespace WpfApp1
         }
         public class Glowa 
         {
-            
+            private double gestosc;
+            private double obwod;
+            private double wysokosc
         }
     }
 }
